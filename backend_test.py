@@ -10,7 +10,7 @@ class ExpenseTrackerAPITest(unittest.TestCase):
         self.base_url = "http://localhost:8001/api"
         self.token = None
         self.user_id = None
-        self.test_email = "test@example.com"
+        self.test_email = f"test{datetime.now().strftime('%H%M%S')}@example.com"
         self.test_username = "testuser"
         self.test_password = "Password123!"
         self.test_category_id = None
