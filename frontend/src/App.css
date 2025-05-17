@@ -1,0 +1,107 @@
+/* Custom styling for the expense tracker app */
+
+/* Apply theme colors */
+:root {
+  --primary: var(--primary, #3b82f6);
+  --primary-light: var(--primary-light, #93c5fd);
+  --primary-dark: var(--primary-dark, #1d4ed8);
+  --bg-primary: var(--bg-primary, #ffffff);
+  --bg-secondary: var(--bg-secondary, #f3f4f6);
+  --text-primary: var(--text-primary, #1f2937);
+  --text-secondary: var(--text-secondary, #4b5563);
+  --border: var(--border, #e5e7eb);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Override Tailwind primary colors with theme variables */
+.bg-primary-50 { background-color: rgba(var(--primary), 0.05); }
+.bg-primary-100 { background-color: rgba(var(--primary), 0.1); }
+.bg-primary-200 { background-color: rgba(var(--primary), 0.2); }
+.bg-primary-300 { background-color: rgba(var(--primary), 0.3); }
+.bg-primary-400 { background-color: rgba(var(--primary), 0.4); }
+.bg-primary-500, .bg-primary { background-color: var(--primary); }
+.bg-primary-600 { background-color: var(--primary-dark); }
+.bg-primary-700 { background-color: var(--primary-dark); }
+.bg-primary-800 { background-color: var(--primary-dark); }
+.bg-primary-900 { background-color: var(--primary-dark); }
+
+.text-primary-500, .text-primary { color: var(--primary); }
+.text-primary-600 { color: var(--primary-dark); }
+.text-primary-400 { color: var(--primary-light); }
+
+.border-primary-500, .border-primary { border-color: var(--primary); }
+.ring-primary-500, .ring-primary { --tw-ring-color: var(--primary); }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #64748b;
+}
+
+/* Form element styling */
+input, select, textarea {
+  outline: none;
+}
+
+/* Add smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Add subtle hover effects to cards */
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Enhance focus styles for accessibility */
+.focus-visible:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .responsive-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .responsive-container {
+    width: 100%;
+  }
+}
