@@ -143,7 +143,7 @@ class ExpenseTrackerAPITest(unittest.TestCase):
         if not self.token:
             self.test_02_login()
         
-        category_name = "Entertainment"
+        category_name = "Custom Entertainment"
         category_data = {"name": category_name}
         
         headers = {"Authorization": f"Bearer {self.token}"}
